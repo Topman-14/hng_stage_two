@@ -1,7 +1,8 @@
 
 # HNG stage two REST API
 
-This project is my stage two submission; a RESTful API for managing person records. My slack name is **Topman**.
+My slack name is **Topman**. <br>
+This project is my stage two submission; a RESTful API for managing person records.
 
 ## Languages and Tools
 
