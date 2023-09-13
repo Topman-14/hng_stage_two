@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-const port = process.env.PORT || 4000;
+const port = 4000;
 const personRoutes = require('./routes/personRoutes.js')
 
 app.use(express.json())
@@ -12,7 +12,7 @@ app.use((req, res, next)=>{
     next()
 })
 
-app.use('/api/', personRoutes);
+app.use('/api', personRoutes);
 
 app.listen(port, "localhost", () => {
     console.log(`Server listening on localhost:${port}`);
