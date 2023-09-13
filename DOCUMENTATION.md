@@ -156,4 +156,27 @@ In the event that there are multiple Person objects with the same name, and you 
 <br>
 
 ## 5. Setup and Deployment
+This section is already included in the [README.md](https://github.com/Topman-14/hng_stage_two/blob/main/README.md)
 
+1. Clone the repository:
+   
+    ```
+   git clone https://github.com/Topman-14/hng_stage_two.git
+2. Navigate to the project directory:
+   
+    ```
+    cd hng_stage_two
+3. Install dependencies:
+   
+   ```
+   npm install
+4. Create a .env file and configure the MongoDB connection and port number:
+   
+    ```.env
+    PORT=4000
+    MONGO_URI="<your_connection_string>"
+5. Start the server:
+   ```shell
+   npm start
+
+The API will be accessible at http://localhost:4000/api/
