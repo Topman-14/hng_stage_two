@@ -8,7 +8,7 @@ This documentation provides comprehensive information about the Person API, incl
 2. API Endpoints
 4. Sample API Usage & Response Formats
 5. Limitations and Assumptions
-6. Setup and Deployment
+6. Local Setup
 
 ---
 <br>
@@ -155,7 +155,7 @@ In the event that there are multiple Person objects with the same name, and you 
  ---
 <br>
 
-## 5. Setup and Deployment
+## 5. Local Setup
 This section is already included in the [README.md](https://github.com/Topman-14/hng_stage_two/blob/main/README.md)
 
 1. Clone the repository:
