@@ -17,21 +17,6 @@ const createPerson = async (req, res) =>{
     }
 }
 
-// const getPerson = async (req, res) =>{
-//       const { user_id } = req.params;
-  
-//       const conditions = !mongoose.Types.ObjectId.isValid(user_id)
-//         ? { name: decodeURIComponent(user_id.replace(/\+/g, '%20')) }
-//         : { _id: user_id };
-  
-//       const person = await Person.findOne(conditions);
-  
-//       if (!person) {
-//         return res.status(404).json({ error: 'No such person found' });
-//       }
-
-//     res.status(200).json(person)
-// }
 
 const getPerson = async (req, res) => {
   const { user_id } = req.params;
@@ -94,23 +79,6 @@ const updatePerson = async (req, res) => {
 
 
   const deletePerson = async (req, res) => {
-    // const { user_id } = req.params;
-  
-    // const conditions = !mongoose.Types.ObjectId.isValid(user_id)
-    //   ? { name: decodeURIComponent(user_id.replace(/\+/g, '%20')) }
-    //   : { _id: user_id };
-  
-    // try {
-    //   const person = await Person.findOneAndDelete(conditions);
-  
-    //   if (!person) {
-    //     return res.status(404).json({ error: 'No such person found' });
-    //   }
-  
-    //   return res.status(200).json({ message: 'Person deleted successfully' });
-    // } catch (error) {
-    //   return res.status(500).json({error: error.message});
-    // }
     const { user_id } = req.params;
 
     const decodedUserId = decodeURI(user_id);

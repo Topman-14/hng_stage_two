@@ -17,5 +17,16 @@
     "start": "nodemon index"
   },
   "author": "Topman",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Topman-14/hng_stage_two.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Topman-14/hng_stage_two/issues"
+  },
+  "homepage": "https://github.com/Topman-14/hng_stage_two#readme",
+  "engines": {
+    "node": ">=14.20.1"
+  }
 }
