@@ -6,8 +6,7 @@ This documentation provides comprehensive information about the Person API, incl
 
 1. Dynamic Parameter Handling
 2. API Endpoints
-3. Request/Response Formats
-4. Sample API Usage
+4. Sample API Usage & Response Formats
 5. Limitations and Assumptions
 6. Setup and Deployment
 
@@ -46,10 +45,17 @@ Also, the API accepts paths with spaces. The URI component from the browser is t
 ---
 <br>
 
-## 3. Request/Response Formats
+## 3. Sample API Usage & Response Formats
 
 ### Create a Person (POST)
-
+- **Request:**
+  - `shell`:
+      ```shell
+      curl -X POST http://localhost:4000/api \
+      -H "Content-Type: application/json" \
+      -d '{"name": "John Doe"}'
+      ```
+    
 - **Request Body:**
   - `name` (String, required): The name of the person to create.
 
@@ -62,8 +68,15 @@ Also, the API accepts paths with spaces. The URI component from the browser is t
       "__v": 0
     }
     ```
+---
+<br>
 
 ### Get a Person (GET)
+- **Request:**
+  - `shell`:
+      ```shell
+      curl http://localhost:4000/api/5f74ce84f3f6f129c7c4148d
+      ```
 
 - **Response:**
   - `200 OK`:
@@ -74,9 +87,17 @@ Also, the API accepts paths with spaces. The URI component from the browser is t
       "__v": 0
     }
     ```
+---
+<br>
 
 ### Update a Person (PATCH)
-
+- **Request:**
+  - `shell`:
+      ```shell
+      curl -X PATCH http://localhost:4000/api/5f74ce84f3f6f129c7c4148d \
+      -H "Content-Type: application/json" \
+      -d '{"name": "Jane Doe"}'
+      ```
 - **Request Body:**
   - `name` (String, required): The updated name for the person.
 
@@ -89,9 +110,16 @@ Also, the API accepts paths with spaces. The URI component from the browser is t
       "__v": 0
     }
     ```
+---
+<br>
+
 
 ### Delete a Person (DELETE)
-
+- **Request:**
+  - `shell`:
+      ```shell
+      curl -X DELETE http://localhost:4000/api/5f74ce84f3f6f129c7c4148d
+      ```
 - **Response:**
   - `200 OK`:
     ```json
@@ -99,14 +127,33 @@ Also, the API accepts paths with spaces. The URI component from the browser is t
       "message": "Person deleted successfully"
     }
     ```
+---
+<br>
 
-### 3. Sample API Usage
+### Get a Person (with name instead of id) 
+for all of the examples above, you can use the name as well as id in the request.
+- **Request:**
+  - `shell`:
+      ```shell
+      curl http://localhost:4000/api/John%20Doe
+      ```
+- **Response:**
+  - `200 OK`:
+    ```json
+    {
+      "_id": "5f74ce84f3f6f129c7c4148d",
+      "name": "John Doe",
+      "__v": 0
+    }
+    ```
+---
+<br>
 
-#### Create a Person (POST)
+## 4. Limitations and Assumptions
+In the event that there are multiple Person objects with the same name, and you are trying to perform an operation while using the name as an identifier, only one of the Objects will be affected.
 
-**Request:**
+ ---
+<br>
 
-```shell
-curl -X POST http://localhost:3000/api/persons \
-  -H "Content-Type: application/json" \
-  -d '{"name": "John Doe"}'
+## 5. Setup and Deployment
+
