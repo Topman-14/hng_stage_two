@@ -1,8 +1,9 @@
 
 # HNG stage two REST API
 
-My slack name is **Topman**. <br>
-This project is my stage two submission; a RESTful API for managing person records.
+- My slack name is **Topman**. <br>
+- This project is my stage two submission; a RESTful API for managing person records.<br>
+- I'm using a render free plan to host this API, so it will be slow to start after inactivity for a period of time.
 
 ## Languages and Tools
 
@@ -37,7 +38,7 @@ The API will be accessible at http://localhost:4000/api/
 
 
 ## API Documentation
-For detailed API docs and use cases, refer to the documentation.md file.
+For detailed API docs and use cases, refer to the [documentation](https://github.com/Topman-14/hng_stage_two/blob/main/DOCUMENTATION.md)
 
 ## UML Diagrams
 
